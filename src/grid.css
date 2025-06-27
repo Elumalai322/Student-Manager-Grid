@@ -1,0 +1,170 @@
+/* Wrapper styles */
+.grid-wrapper {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Headings */
+.main-heading {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: #333;
+}
+
+.student-count {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Search Bar */
+.search-container {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.search-container input {
+  padding: 10px 15px;
+  width: 280px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.3s;
+}
+
+.search-container input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Form */
+.add-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.add-form input {
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 220px;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.form-buttons button,
+.cancel-btn {
+  padding: 10px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* Table */
+.grid-table {
+  overflow-x: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid-header,
+.grid-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr 1fr 2fr;
+  padding: 12px 10px;
+  align-items: center;
+}
+
+.grid-header {
+  background-color: #343a40;
+  color: white;
+  font-weight: bold;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.grid-row:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.grid-row:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.grid-row:hover {
+  background-color: #eef6ff;
+  transition: 0.3s;
+}
+
+.grid-row div,
+.grid-header div {
+  padding: 6px;
+  text-align: center;
+}
+
+/* Buttons */
+.edit-btn,
+.delete-btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  margin-right: 6px;
+}
+
+.edit-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: #999;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid-header,
+  .grid-row {
+    grid-template-columns: repeat(6, 1fr);
+    font-size: 14px;
+  }
+
+  .add-form input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .search-container input {
+    width: 90%;
+  }
+}
