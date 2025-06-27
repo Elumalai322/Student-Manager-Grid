@@ -50,10 +50,6 @@ const Grid = () => {
     setEditIndex(null);
   };
 
-  const scrollToStudent = (index) => {
-    studentRefs.current[index].scrollIntoView({ behavior: 'smooth', block: 'center' });
-  };
-
   const filteredStudents = students.filter(student =>
     student.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
